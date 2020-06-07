@@ -1,0 +1,25 @@
+default:
+  server:
+    port: 4843
+    buildInfo:
+      productName: "Dummy Dateset Server"
+      buildNumber: "0001"
+    ip: "0.0.0.0"
+    endpointName: 'OPCUA@Siemens'
+    username: 'root'
+    password: 'root'
+    allowAnonymous: false,
+    serverInfo:
+      applicationUri: "http://siemens.com/SkillOPCUA"
+      productUri: "siemens.com/SP347_Example"
+      applicationName: "SP347SkillEngineering@Siemens" 
+    serverNodeSet: ["UA-Nodeset-master/DI/Opc.Ua.Di.PredefinedNodes.xml",
+    "UA-Nodeset-master/FDI/Opc.Ua.Fdi7.PredefinedNodes.xml", 
+    "UA-Nodeset-master/CNC/Opc.Ua.CNC.NodeSet.xml", 
+    "UA-Nodeset-master/Robotics/Opc.Ua.Robotics.NodeSet2.xml", 
+    "UA-Nodeset-master/TMC\Opc.Ua.TMC.NodeSet2.xml",
+    "UA-Nodeset-master/PackML/Opc.Ua.PackML.NodeSet2.xml",
+    "UA-Nodeset-master/IOLink/Opc.Ua.IOLink.NodeSet2.xml",
+    "UA-Nodeset-master/PlasticsRubber/GeneralTypes/1.02/Opc.Ua.PlasticsRubber.GeneralTypes.NodeSet2.xml",
+    "UA-Nodeset-master/PlasticsRubber/TCD/1.01/Opc.Ua.PlasticsRubber.TCD.NodeSet2.xml",
+    "UA-Nodeset-master/PlasticsRubber/Extrusion/ExtrusionLine/1.00/Opc.Ua.PlasticsRubber.Extrusion.ExtrusionLine.NodeSet2.xml"]
