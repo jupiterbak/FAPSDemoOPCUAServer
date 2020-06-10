@@ -2,7 +2,7 @@
 const path = require("path")
 const opcua = require("node-opcua");
 var yaml_config = require('node-yaml-config');
-var config = yaml_config.load(__dirname + '/config_dataset_one.yml');
+var config = yaml_config.load(__dirname + '/config.yml');
 
 const winston = require('winston');
 const logger = winston.createLogger({
@@ -16,7 +16,7 @@ const logger = winston.createLogger({
             return `${log.timestamp} - [${log.level}] | [${log.service}] : ${log.message}`;
         })
     ),
-    defaultMeta: { service: 'Dummy Server' },
+    defaultMeta: { service: 'Dummy Server'},
 });
 
 // Let's create an instance of OPCUAServer

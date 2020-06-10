@@ -2,7 +2,7 @@
 
 This is repository of the DEMO OPC UA-servers used to validate the results of the paper entitled "OPC UA Knowledge Completion via Graph Embedding and Reinforcement Learning". The servers import multiple nodesets copied from the official releases of the OPC Foundation: [https://github.com/OPCFoundation/UA-Nodeset](https://github.com/OPCFoundation/UA-Nodeset)
 
-The default port of the servers application are ***4840*** and can be changed in the configuration file ***config_dataset_one.yml*** and ***config_dataset_two.yml***.
+The default port of the servers application are ***4840*** and can be changed in the configuration file ***config.yml***.
 [![DOI](https://zenodo.org/badge/270277941.svg)](https://zenodo.org/badge/latestdoi/270277941)
 
 ## Requirements
@@ -51,13 +51,13 @@ Step 1: Clone the repo
 Step 2: Build the Docker image
 
 ```bash
-docker build -t opcua_server_skill_add .
+docker build -t faps_opcua_demo_server_one .
 ```
 
 Step 3: Run the Docker container locally:
 
 ```bash
-docker run -p 4843:4843 -d opcua_server_skill_add
+docker run -p 4840:4840 -d faps_opcua_demo_server_one
 ```
 
 <!-- USAGE -->
@@ -69,9 +69,9 @@ In order to configurethe server, the file ***config.yml*** has to be configured 
 ```yaml
 default:
   server:
-    port: 4843
+    port: 4840
     buildInfo:
-      productName: "DummySkillServer - Add"
+      productName: "Dummy Dateset Server One"
       buildNumber: "0001"
     ip: "0.0.0.0"
     endpointName: 'OPCUA@Siemens'
@@ -82,7 +82,12 @@ default:
       applicationUri: "http://siemens.com/SkillOPCUA"
       productUri: "siemens.com/SP347_Example"
       applicationName: "SP347SkillEngineering@Siemens" 
-    serverNodeSet: ["AutomationSkillType_OptionalStateMachine.xml","SkillADD_OptionalStateMachine.xml"]
+    serverNodeSet: ["UA-Nodeset-master/DI/Opc.Ua.Di.PredefinedNodes.xml",
+    "UA-Nodeset-master/FDI/Opc.Ua.Fdi7.PredefinedNodes.xml", 
+    "UA-Nodeset-master/ISA-95/Opc.ISA95.NodeSet2.xml", 
+    "UA-Nodeset-master/AML/Opc.Ua.AMLBaseTypes.NodeSet2.xml", 
+    "UA-Nodeset-master/AutoID/Opc.Ua.AutoID.NodeSet2.xml",
+    "UA-Nodeset-master/MachineVision/Opc.Ua.MachineVision.NodeSet2.xml"]
 
 ```
 

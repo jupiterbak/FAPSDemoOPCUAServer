@@ -1,8 +1,8 @@
 default:
   server:
-    port: 4843
+    port: 4840
     buildInfo:
-      productName: "Dummy Dateset Server"
+      productName: "Dummy Dateset Server One"
       buildNumber: "0001"
     ip: "0.0.0.0"
     endpointName: 'OPCUA@Siemens'
