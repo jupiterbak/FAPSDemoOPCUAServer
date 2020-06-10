@@ -3,6 +3,7 @@
 This is repository of the DEMO OPC UA-servers used to validate the results of the paper entitled "OPC UA Knowledge Completion via Graph Embedding and Reinforcement Learning". The servers import multiple nodesets copied from the official releases of the OPC Foundation: [https://github.com/OPCFoundation/UA-Nodeset](https://github.com/OPCFoundation/UA-Nodeset)
 
 The default port of the servers application are ***4840*** and can be changed in the configuration file ***config_dataset_one.yml*** and ***config_dataset_two.yml***.
+[![DOI](https://zenodo.org/badge/270277941.svg)](https://zenodo.org/badge/latestdoi/270277941)
 
 ## Requirements
 
