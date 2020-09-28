@@ -18,4 +18,5 @@ default:
     "UA-Nodeset-master/ISA-95/Opc.ISA95.NodeSet2.xml", 
     "UA-Nodeset-master/AML/Opc.Ua.AMLBaseTypes.NodeSet2.xml", 
     "UA-Nodeset-master/AutoID/Opc.Ua.AutoID.NodeSet2.xml",
-    "UA-Nodeset-master/MachineVision/Opc.Ua.MachineVision.NodeSet2.xml"]
+    "UA-Nodeset-master/MachineVision/Opc.Ua.MachineVision.NodeSet2.xml",
+    "UA-Nodeset-master/Skills/export_skill_energy_demonstrator.xml"]
